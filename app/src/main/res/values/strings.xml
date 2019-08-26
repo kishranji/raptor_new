@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">raptor</string>
+    <string name="lable_enter_user_name">Enter your user name...</string>
+</resources>
