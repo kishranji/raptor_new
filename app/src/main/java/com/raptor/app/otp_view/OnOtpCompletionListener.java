@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.raptor.otp_view;
+package com.raptor.app.otp_view;
 
 public interface OnOtpCompletionListener {
   void onOtpCompleted(String otp);

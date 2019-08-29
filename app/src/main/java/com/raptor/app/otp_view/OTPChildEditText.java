@@ -1,4 +1,4 @@
-package com.example.raptor.otp_view;
+package com.raptor.app.otp_view;
 
 import android.content.Context;
 import android.text.InputType;
@@ -6,7 +6,7 @@ import android.util.AttributeSet;
 
 import androidx.appcompat.widget.AppCompatEditText;
 
-import com.example.raptor.R;
+import com.raptor.app.R;
 
 class OTPChildEditText extends AppCompatEditText {
 

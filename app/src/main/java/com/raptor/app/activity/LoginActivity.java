@@ -1,16 +1,13 @@
-package com.example.raptor.activity;
+package com.raptor.app.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.LinearGradient;
-import android.graphics.Shader;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.Editable;
-import android.text.TextPaint;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,8 +16,9 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.example.raptor.AppHelper;
-import com.example.raptor.R;
+import com.google.firebase.analytics.FirebaseAnalytics;
+import com.raptor.app.AppHelper;
+import com.raptor.app.R;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -28,10 +26,12 @@ public class LoginActivity extends AppCompatActivity {
     RelativeLayout mLoginBTN;
     EditText mUserName, mUserPassword;
     String mUserNameStr = "", mPasswordStr = "";
+    private FirebaseAnalytics mFirebaseAnalytics;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         setContentView(R.layout.activity_login);
         init();
         clickListener();
@@ -39,6 +39,8 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void init() {
+
+
 
         mLoginTextView1 = (TextView) findViewById(R.id.login_info1);
         mLoginTextView2 = (TextView) findViewById(R.id.login_info2);
@@ -48,7 +50,6 @@ public class LoginActivity extends AppCompatActivity {
         mForgotPass = (TextView) findViewById(R.id.login_forgotpassword);
         mUserName = (EditText) findViewById(R.id.login_username);
         mUserPassword = (EditText) findViewById(R.id.login_userpass);
-
         AppHelper.setTextViewGradient(mLoginTextView1, mLoginTextView1.getText().toString(), new int[]{
                 Color.parseColor("#9D4FD8"),
                 Color.parseColor("#D12270"),

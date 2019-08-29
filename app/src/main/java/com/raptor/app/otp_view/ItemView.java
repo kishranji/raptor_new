@@ -1,4 +1,4 @@
-package com.example.raptor.otp_view;
+package com.raptor.app.otp_view;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -15,7 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.res.ResourcesCompat;
 
-import com.example.raptor.R;
+import com.raptor.app.R;
 
 public class ItemView extends FrameLayout {
     public static final int ACTIVE = 1;

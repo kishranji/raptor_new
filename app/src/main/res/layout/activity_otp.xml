@@ -49,7 +49,7 @@
             android:gravity="left"
             tools:ignore="RtlHardcoded">
 
-            <com.example.raptor.otp_view.OtpTextView
+            <com.raptor.app.otp_view.OtpTextView
                 android:id="@+id/otp_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -71,6 +71,7 @@
             android:orientation="horizontal">
 
             <RelativeLayout
+                android:id="@+id/otp_submit_BTN"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dimen5"
@@ -87,6 +88,7 @@
                     android:tint="@color/white" />
 
                 <TextView
+                    android:id="@+id/otp_submit_TXT"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
@@ -101,6 +103,7 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/otp_resend_BTN"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dimen5"
@@ -117,6 +120,7 @@
                     android:tint="@color/white" />
 
                 <TextView
+                    android:id="@+id/otp_resend_TXT"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"

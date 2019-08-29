@@ -1,4 +1,4 @@
-package com.example.raptor;
+package com.raptor.app;
 
 import android.graphics.LinearGradient;
 import android.graphics.Shader;

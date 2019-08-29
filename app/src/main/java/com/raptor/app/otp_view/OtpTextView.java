@@ -1,4 +1,4 @@
-package com.example.raptor.otp_view;
+package com.raptor.app.otp_view;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -16,7 +16,7 @@ import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.example.raptor.R;
+import com.raptor.app.R;
 
 import java.util.ArrayList;
 import java.util.List;

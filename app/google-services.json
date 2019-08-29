@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "721755359142",
+    "firebase_url": "https://raptor-3c588.firebaseio.com",
+    "project_id": "raptor-3c588",
+    "storage_bucket": "raptor-3c588.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:721755359142:android:48856d56236856e2",
+        "android_client_info": {
+          "package_name": "com.raptor.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "721755359142-kte13h0tu6vv204tiau56com0eio0u7p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.raptor.app",
+            "certificate_hash": "6b3340ff046fb39387535c3f2f06d95519fc3425"
+          }
+        },
+        {
+          "client_id": "721755359142-tfglgaal26r1la6ck4cb2kp1eforku5i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANuK5gyHJdJGDPAtl5A0nevke2cS7fg-E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "721755359142-tfglgaal26r1la6ck4cb2kp1eforku5i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

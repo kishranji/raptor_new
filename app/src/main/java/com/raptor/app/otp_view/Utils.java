@@ -1,4 +1,4 @@
-package com.example.raptor.otp_view;
+package com.raptor.app.otp_view;
 
 import android.content.Context;
 import android.content.res.Resources;
