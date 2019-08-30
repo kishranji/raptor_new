@@ -1,12 +1,11 @@
 package com.raptor.app.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -39,7 +38,6 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void init() {
-
 
 
         mLoginTextView1 = (TextView) findViewById(R.id.login_info1);
@@ -133,8 +131,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-
-
 
 
     void showForgotPasswordAlert() {

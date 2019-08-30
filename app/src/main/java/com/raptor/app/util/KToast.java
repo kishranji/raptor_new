@@ -1,7 +1,8 @@
 package com.raptor.app.util;
 
 
-import androidx.fragment.app.FragmentActivity;
+
+import android.support.v4.app.FragmentActivity;
 
 import com.andrognito.flashbar.Flashbar;
 import com.andrognito.flashbar.anim.FlashAnim;

@@ -1,15 +1,13 @@
 package com.raptor.app.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.raptor.app.AppHelper;
@@ -76,7 +74,7 @@ public class OtpActivity extends AppCompatActivity {
                 if (mOtpTextView.getOTP().trim().length() != 6) {
                     KToast.errorToast(OtpActivity.this, "Enter your OTP");
 //                    Toast.makeText(mContext, "Enter your OTP", Toast.LENGTH_SHORT).show();
-                }else {
+                } else {
                     callResetPassword();
                 }
             }
@@ -103,7 +101,7 @@ public class OtpActivity extends AppCompatActivity {
     }
 
     private void callResetPassword() {
-        Intent aIntent = new Intent(this,ResetPasswordActivity.class);
+        Intent aIntent = new Intent(this, ResetPasswordActivity.class);
         startActivity(aIntent);
         finish();
     }

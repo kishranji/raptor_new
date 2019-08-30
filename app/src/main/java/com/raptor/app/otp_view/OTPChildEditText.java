@@ -1,10 +1,9 @@
 package com.raptor.app.otp_view;
 
 import android.content.Context;
+import android.support.v7.widget.AppCompatEditText;
 import android.text.InputType;
 import android.util.AttributeSet;
-
-import androidx.appcompat.widget.AppCompatEditText;
 
 import com.raptor.app.R;
 
