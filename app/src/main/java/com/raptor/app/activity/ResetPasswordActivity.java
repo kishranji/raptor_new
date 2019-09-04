@@ -2,11 +2,12 @@ package com.raptor.app.activity;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import android.support.v7.app.AppCompatActivity;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.raptor.app.AppHelper;
@@ -106,7 +107,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
             KeyboardUtils.showSoftKeyboard(this, mConfirmPass);
         } else if (!mPass.getText().toString().trim().equals(mConfirmPass.getText().toString().trim())) {
             mBoolean = false;
-            KToast.errorToast(this, "Create password and confirm password must be same");
+            //KToast.errorToast(this, "Create password and confirm password must be same");
         }
 
         return mBoolean;

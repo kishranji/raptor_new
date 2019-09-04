@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -22,7 +23,7 @@ import com.raptor.app.R;
 public class LoginActivity extends AppCompatActivity {
 
     TextView mLoginTextView1, mLoginTextView2, mLoginTextView3, mLoginText, mForgotPass;
-    RelativeLayout mLoginBTN;
+    ImageView mLoginBTN;
     EditText mUserName, mUserPassword;
     String mUserNameStr = "", mPasswordStr = "";
     private FirebaseAnalytics mFirebaseAnalytics;
@@ -43,12 +44,12 @@ public class LoginActivity extends AppCompatActivity {
         mLoginTextView1 = (TextView) findViewById(R.id.login_info1);
         mLoginTextView2 = (TextView) findViewById(R.id.login_info2);
         mLoginTextView3 = (TextView) findViewById(R.id.login_info3);
-        mLoginText = (TextView) findViewById(R.id.login_text);
-        mLoginBTN = (RelativeLayout) findViewById(R.id.loginBTN);
+        //mLoginText = (TextView) findViewById(R.id.login_text);
+        mLoginBTN = (ImageView) findViewById(R.id.loginBTN);
         mForgotPass = (TextView) findViewById(R.id.login_forgotpassword);
         mUserName = (EditText) findViewById(R.id.login_username);
         mUserPassword = (EditText) findViewById(R.id.login_userpass);
-        AppHelper.setTextViewGradient(mLoginTextView1, mLoginTextView1.getText().toString(), new int[]{
+        /*AppHelper.setTextViewGradient(mLoginTextView1, mLoginTextView1.getText().toString(), new int[]{
                 Color.parseColor("#9D4FD8"),
                 Color.parseColor("#D12270"),
                 Color.parseColor("#F4681E"),
@@ -68,12 +69,12 @@ public class LoginActivity extends AppCompatActivity {
                 Color.parseColor("#6875D9"),
                 Color.parseColor("#6875D9"),
         });
-
-        AppHelper.setTextViewGradient(mLoginText, mLoginText.getText().toString(), new int[]{
+*/
+        /*AppHelper.setTextViewGradient(mLoginText, mLoginText.getText().toString(), new int[]{
                 Color.parseColor("#3C2848"),
                 Color.parseColor("#CE1C59"),
                 Color.parseColor("#3C2848"),
-        });
+        });*/
     }
 
     private void clickListener() {
