@@ -46,22 +46,6 @@ public class OtpActivity extends AppCompatActivity {
         mSubmit = findViewById(R.id.otp_submit_BTN);
         mOtpTextView = findViewById(R.id.otp_view);
 
-        AppHelper.setTextViewGradient(mTime, mTime.getText().toString(), new int[]{
-                Color.parseColor("#9D4FD8"),
-                Color.parseColor("#D12270"),
-                Color.parseColor("#F4681E"),
-        });
-        AppHelper.setTextViewGradient(mTitle, mTitle.getText().toString(), new int[]{
-                Color.parseColor("#9D4FD8"),
-                Color.parseColor("#D12270"),
-                Color.parseColor("#F4681E"),
-        });
-        AppHelper.setTextViewGradient(mBack, mBack.getText().toString(), new int[]{
-                Color.parseColor("#9D4FD8"),
-                Color.parseColor("#D12270"),
-                Color.parseColor("#F4681E"),
-        });
-
         clickListener();
     }
 

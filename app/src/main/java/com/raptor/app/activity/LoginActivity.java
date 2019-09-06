@@ -19,6 +19,7 @@ import android.widget.TextView;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.raptor.app.AppHelper;
 import com.raptor.app.R;
+import com.raptor.app.util.KToast;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -41,7 +42,7 @@ public class LoginActivity extends AppCompatActivity {
     private void init() {
 
 
-        mLoginTextView1 = (TextView) findViewById(R.id.login_info1);
+//        mLoginTextView1 = (TextView) findViewById(R.id.login_info1);
         mLoginTextView2 = (TextView) findViewById(R.id.login_info2);
         mLoginTextView3 = (TextView) findViewById(R.id.login_info3);
         //mLoginText = (TextView) findViewById(R.id.login_text);
@@ -116,9 +117,9 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (mUserNameStr.equals("")) {
-                    mUserName.setError("Please fill out this filed");
+                    KToast.errorToast(LoginActivity.this, "Please enter your user name");
                 } else if (mPasswordStr.equals("")) {
-                    mUserPassword.setError("Please fill out this filed");
+                    KToast.errorToast(LoginActivity.this, "Please enter your password");
                 } else {
                     //validate login
                 }
@@ -142,12 +143,11 @@ public class LoginActivity extends AppCompatActivity {
         TextView mInfo2 = dialogView.findViewById(R.id.forgot_pass_info2);
         TextView mInfo3 = dialogView.findViewById(R.id.forgot_pass_info3);
         TextView mOkayTxt = dialogView.findViewById(R.id.forgot_pass_ok_txt);
-        TextView mCancelTxt = dialogView.findViewById(R.id.forgot_pass_cancel_txt);
         RelativeLayout mOkayBTN = dialogView.findViewById(R.id.forgot_pass_ok);
-        RelativeLayout mCancelBTN = dialogView.findViewById(R.id.forgot_pass_cancel);
+        ImageView mCancelBTN = dialogView.findViewById(R.id.forgot_pass_cancel);
         final EditText mForgotPassUserName = dialogView.findViewById(R.id.forgot_pass_username);
 
-        AppHelper.setTextViewGradient(mOkayTxt, mOkayTxt.getText().toString(), new int[]{
+        /*AppHelper.setTextViewGradient(mOkayTxt, mOkayTxt.getText().toString(), new int[]{
                 Color.parseColor("#9D4FD8"),
                 Color.parseColor("#D12270"),
                 Color.parseColor("#F4681E"),
@@ -179,7 +179,7 @@ public class LoginActivity extends AppCompatActivity {
                 Color.parseColor("#9D4FD8"),
                 Color.parseColor("#D12270"),
                 Color.parseColor("#F4681E"),
-        });
+        });*/
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setView(dialogView);
@@ -190,7 +190,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (mForgotPassUserName.getText().toString().isEmpty())
-                    mForgotPassUserName.setError("Please fill out this filed");
+                    KToast.errorToast(LoginActivity.this, "Please enter your user name");
                 else {
                     alertDialog.dismiss();
                     callOtpActivity();

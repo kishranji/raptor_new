@@ -2,6 +2,7 @@ package com.raptor.app.util;
 
 
 
+import android.app.Activity;
 import android.support.v4.app.FragmentActivity;
 
 import com.andrognito.flashbar.Flashbar;
@@ -809,7 +810,7 @@ public class KToast {
         builder.show();
     }
 
-    public static void errorToast(FragmentActivity context, String aMessage) {
+    public static void errorToast(Activity context, String aMessage) {
         Long duration = Flashbar.DURATION_SHORT;
 
         Flashbar.Builder builder = new Flashbar.Builder(context)

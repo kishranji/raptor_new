@@ -2,12 +2,11 @@ package com.raptor.app.activity;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import android.support.v7.app.AppCompatActivity;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.raptor.app.AppHelper;
@@ -42,29 +41,6 @@ public class ResetPasswordActivity extends AppCompatActivity {
         mConfirmPass = findViewById(R.id.reset_confirm_userpass);
 
 
-        AppHelper.setTextViewGradient(mInfo1, mInfo1.getText().toString(), new int[]{
-                Color.parseColor("#9D4FD8"),
-                Color.parseColor("#D12270"),
-                Color.parseColor("#F4681E"),
-        });
-
-        AppHelper.setTextViewGradient(mInfo2, mInfo2.getText().toString(), new int[]{
-                Color.parseColor("#9D4FD8"),
-                Color.parseColor("#D12270"),
-                Color.parseColor("#F4681E"),
-        });
-
-        AppHelper.setTextViewGradient(mBack, mBack.getText().toString(), new int[]{
-                Color.parseColor("#9D4FD8"),
-                Color.parseColor("#D12270"),
-                Color.parseColor("#F4681E"),
-        });
-
-        AppHelper.setTextViewGradient(mResetTxt, mResetTxt.getText().toString(), new int[]{
-                Color.parseColor("#3C2848"),
-                Color.parseColor("#CE1C59"),
-                Color.parseColor("#3C2848"),
-        });
 
         clickListener();
 
@@ -99,15 +75,15 @@ public class ResetPasswordActivity extends AppCompatActivity {
 
         if (mPass.getText().toString().trim().length() == 0) {
             mBoolean = false;
-            mPass.setError("Enter your create password");
+            KToast.errorToast(this, "Enter your create password");
             KeyboardUtils.showSoftKeyboard(this, mPass);
         } else if (mConfirmPass.getText().toString().trim().length() == 0) {
             mBoolean = false;
-            mConfirmPass.setError("Enter your confirm password");
+            KToast.errorToast(this, "Enter your confirm password");
             KeyboardUtils.showSoftKeyboard(this, mConfirmPass);
         } else if (!mPass.getText().toString().trim().equals(mConfirmPass.getText().toString().trim())) {
             mBoolean = false;
-            //KToast.errorToast(this, "Create password and confirm password must be same");
+            KToast.errorToast(this, "Create password and confirm password must be same");
         }
 
         return mBoolean;
